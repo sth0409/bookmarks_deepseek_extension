@@ -92,7 +92,7 @@ bookmarks_deepseek_extension/
 
 ## 许可证
 
-MIT License
+GNU GENERAL PUBLIC LICENSE
 
 ## 贡献
 
