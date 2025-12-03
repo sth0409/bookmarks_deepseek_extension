@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>书签智能整理</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 书签智能整理</h1>
+      <button id="settingsBtn" class="icon-btn" title="设置">⚙️</button>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="organize">分类整理</button>
+      <button class="tab" data-tab="check">检测无效</button>
+    </div>
+
+    <!-- 分类整理标签页 -->
+    <div id="organizeTab" class="tab-content active">
+      <div class="section">
+        <button id="loadBookmarksBtn" class="primary-btn">📖 加载书签</button>
+        <div id="bookmarkCount" class="info-text"></div>
+      </div>
+
+      <div id="bookmarkList" class="bookmark-list"></div>
+
+      <div class="section" id="actionSection" style="display: none;">
+        <button id="classifyBtn" class="primary-btn">🤖 AI分类整理</button>
+        <div id="classifyStatus" class="status-text"></div>
+      </div>
+
+      <div id="classifiedResults" class="results"></div>
+    </div>
+
+    <!-- 检测无效标签页 -->
+    <div id="checkTab" class="tab-content">
+      <div class="section">
+        <button id="checkAccessibilityBtn" class="primary-btn">🔍 检测书签可访问性</button>
+        <div id="checkStatus" class="status-text"></div>
+        <div class="progress-bar" id="progressBar" style="display: none;">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <div id="inaccessibleBookmarks" class="results"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+

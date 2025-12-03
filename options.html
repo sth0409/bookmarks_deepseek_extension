@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>设置 - 书签智能整理</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⚙️ 设置</h1>
+    </header>
+
+    <div class="content">
+      <div class="section">
+        <h2>DeepSeek API 配置</h2>
+        <p class="description">
+          请输入您的 DeepSeek API 密钥。如果没有密钥，请访问
+          <a href="https://platform.deepseek.com" target="_blank">DeepSeek 平台</a>
+          获取。
+        </p>
+        
+        <div class="form-group">
+          <label for="apiKey">API 密钥</label>
+          <input 
+            type="password" 
+            id="apiKey" 
+            placeholder="请输入您的 DeepSeek API 密钥"
+            autocomplete="off"
+          >
+          <button id="toggleVisibility" class="toggle-btn" title="显示/隐藏">👁️</button>
+        </div>
+        
+        <button id="saveBtn" class="primary-btn">💾 保存设置</button>
+        <div id="saveStatus" class="status-text"></div>
+      </div>
+
+      <div class="section">
+        <h2>使用说明</h2>
+        <div class="instructions">
+          <h3>功能说明：</h3>
+          <ul>
+            <li><strong>分类整理：</strong>使用 AI 对书签按照用途、类型等进行智能分类</li>
+            <li><strong>检测无效：</strong>检测并筛选出不可访问的书签</li>
+          </ul>
+          
+          <h3>使用步骤：</h3>
+          <ol>
+            <li>在设置页面配置 DeepSeek API 密钥</li>
+            <li>点击"加载书签"按钮加载所有书签</li>
+            <li>点击"AI分类整理"进行智能分类</li>
+            <li>切换到"检测无效"标签页检测不可访问的书签</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
+
